@@ -2,14 +2,25 @@ const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const logger = require('./utils/logger');
+const rateLimit = require('express-rate-limit');
 
 const app = express();
 
-// 1) security headers on every response
+// security headers on every response
 app.use(helmet());
-// 2) parse JSON bodies
+// prevent the unlimited adding auth endpoints: 20 max for 15 min pur IP
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, 
+  max: 20,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { status: 'error', message: 'Too many requests, please try again later' },
+});
+app.use('/api/v1/user', authLimiter);
+
+// parse JSON bodies
 app.use(express.json());
-// 3) HTTP request log -> winston (method, path, status, time)
+// HTTP request log -> winston (method, path, status, time)
 app.use(morgan(':method :url :status - :response-time ms', {
   stream: { write: (msg) => logger.info(msg.trim()) }
 }));
@@ -29,14 +40,10 @@ app.get('/health', (req, res) => {
 });
 
 
+//error handler
+const { notFound, errorHandler } = require('./middleware/errorHandler');
+app.use(notFound);
+app.use(errorHandler);
 
-
-
-
-//temporary error handler
-app.use((err, req, res, next) => {
-  const status = err.statusCode || 500;
-  res.status(status).json({ status: 'error', message: err.message });
-});
 
 module.exports = app;
