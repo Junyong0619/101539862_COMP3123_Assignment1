@@ -1,0 +1,120 @@
+2026-10-17T00:20:08.662Z [WARN] Failed login attempt for alice
+2026-10-17T00:20:08.662Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:20:08.663Z [INFO] POST /api/v1/user/login 401 - 70.990 ms
+2026-10-17T00:20:08.797Z [WARN] Failed login attempt for alice
+2026-10-17T00:20:08.797Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:20:08.798Z [INFO] POST /api/v1/user/login 401 - 71.595 ms
+2026-10-17T00:20:08.978Z [WARN] Failed login attempt for alice
+2026-10-17T00:20:08.979Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:20:08.979Z [INFO] POST /api/v1/user/login 401 - 71.822 ms
+2026-10-17T00:20:09.112Z [WARN] Failed login attempt for alice
+2026-10-17T00:20:09.112Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:20:09.113Z [INFO] POST /api/v1/user/login 401 - 71.356 ms
+2026-10-17T00:20:09.261Z [WARN] Failed login attempt for alice
+2026-10-17T00:20:09.261Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:20:09.261Z [INFO] POST /api/v1/user/login 401 - 71.884 ms
+2026-10-17T00:20:09.400Z [WARN] Failed login attempt for alice
+2026-10-17T00:20:09.400Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:20:09.401Z [INFO] POST /api/v1/user/login 401 - 71.202 ms
+2026-10-17T00:23:35.229Z [INFO] MongoDB connected: comp3123_assignment1
+2026-10-17T00:23:35.238Z [INFO] Server started on port 3000
+2026-10-17T00:24:09.893Z [INFO] GET /health 200 - 2.972 ms
+2026-10-17T00:24:10.025Z [WARN] POST /api/v1/user/signup -> 409 Username already exists
+2026-10-17T00:24:10.026Z [INFO] POST /api/v1/user/signup 409 - 21.221 ms
+2026-10-17T00:24:10.126Z [WARN] POST /api/v1/user/signup -> 409 Username already exists
+2026-10-17T00:24:10.126Z [INFO] POST /api/v1/user/signup 409 - 5.200 ms
+2026-10-17T00:24:10.218Z [WARN] POST /api/v1/user/signup -> 409 Username already exists
+2026-10-17T00:24:10.219Z [INFO] POST /api/v1/user/signup 409 - 4.305 ms
+2026-10-17T00:24:10.306Z [WARN] Validation failed on POST /api/v1/user/signup: username, username, email, password, password
+2026-10-17T00:24:10.307Z [WARN] POST /api/v1/user/signup -> 400 Validation failed
+2026-10-17T00:24:10.308Z [INFO] POST /api/v1/user/signup 400 - 2.081 ms
+2026-10-17T00:24:10.474Z [INFO] User logged in: 6ace930c91a3b9de934d4b0f
+2026-10-17T00:24:10.475Z [INFO] POST /api/v1/user/login 200 - 91.569 ms
+2026-10-17T00:24:10.656Z [INFO] User logged in: 6ad29895696fb30bd0f37124
+2026-10-17T00:24:10.657Z [INFO] POST /api/v1/user/login 200 - 86.001 ms
+2026-10-17T00:24:10.825Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:10.825Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:10.826Z [INFO] POST /api/v1/user/login 401 - 83.532 ms
+2026-10-17T00:24:10.919Z [INFO] Employee created: 6ad2c02af2ad71b59c429951 by user 6ace930c91a3b9de934d4b0f
+2026-10-17T00:24:10.919Z [INFO] POST /api/v1/emp/employees 201 - 19.953 ms
+2026-10-17T00:24:11.002Z [INFO] GET /api/v1/emp/employees 200 - 11.371 ms
+2026-10-17T00:24:11.105Z [INFO] GET /api/v1/emp/employees/6ad2c02af2ad71b59c429951 200 - 8.115 ms
+2026-10-17T00:24:11.207Z [INFO] Employee updated: 6ad2c02af2ad71b59c429951 by user 6ace930c91a3b9de934d4b0f
+2026-10-17T00:24:11.208Z [INFO] PUT /api/v1/emp/employees/6ad2c02af2ad71b59c429951 200 - 14.283 ms
+2026-10-17T00:24:11.307Z [INFO] Employee created: 6ad2c02bf2ad71b59c429952 by user 6ad29895696fb30bd0f37124
+2026-10-17T00:24:11.308Z [INFO] POST /api/v1/emp/employees 201 - 7.673 ms
+2026-10-17T00:24:11.396Z [INFO] GET /api/v1/emp/employees 200 - 4.721 ms
+2026-10-17T00:24:11.488Z [WARN] GET /api/v1/emp/employees/6ad2c02af2ad71b59c429951 -> 404 Employee not found
+2026-10-17T00:24:11.488Z [INFO] GET /api/v1/emp/employees/6ad2c02af2ad71b59c429951 404 - 4.340 ms
+2026-10-17T00:24:11.566Z [WARN] PUT /api/v1/emp/employees/6ad2c02af2ad71b59c429951 -> 404 Employee not found
+2026-10-17T00:24:11.567Z [INFO] PUT /api/v1/emp/employees/6ad2c02af2ad71b59c429951 404 - 5.321 ms
+2026-10-17T00:24:11.645Z [WARN] DELETE /api/v1/emp/employees?eid=6ad2c02af2ad71b59c429951 -> 404 Employee not found
+2026-10-17T00:24:11.646Z [INFO] DELETE /api/v1/emp/employees?eid=6ad2c02af2ad71b59c429951 404 - 6.017 ms
+2026-10-17T00:24:11.723Z [WARN] GET /api/v1/emp/employees/6ad2c02bf2ad71b59c429952 -> 404 Employee not found
+2026-10-17T00:24:11.724Z [INFO] GET /api/v1/emp/employees/6ad2c02bf2ad71b59c429952 404 - 4.464 ms
+2026-10-17T00:24:11.804Z [INFO] Employee updated: 6ad2c02af2ad71b59c429951 by user 6ace930c91a3b9de934d4b0f
+2026-10-17T00:24:11.805Z [INFO] PUT /api/v1/emp/employees/6ad2c02af2ad71b59c429951 200 - 6.710 ms
+2026-10-17T00:24:11.895Z [INFO] Employee deleted: 6ad2c02bf2ad71b59c429952 by user 6ad29895696fb30bd0f37124
+2026-10-17T00:24:11.896Z [INFO] DELETE /api/v1/emp/employees?eid=6ad2c02bf2ad71b59c429952 204 - 4.736 ms
+2026-10-17T00:24:11.989Z [INFO] Employee deleted: 6ad2c02af2ad71b59c429951 by user 6ace930c91a3b9de934d4b0f
+2026-10-17T00:24:11.990Z [INFO] DELETE /api/v1/emp/employees?eid=6ad2c02af2ad71b59c429951 204 - 4.937 ms
+2026-10-17T00:24:12.082Z [WARN] GET /api/v1/emp/employees/6ad2c02af2ad71b59c429951 -> 404 Employee not found
+2026-10-17T00:24:12.083Z [INFO] GET /api/v1/emp/employees/6ad2c02af2ad71b59c429951 404 - 4.581 ms
+2026-10-17T00:24:12.173Z [WARN] POST /api/v1/user/login -> 400 Malformed JSON in request body
+2026-10-17T00:24:12.246Z [WARN] GET /api/v1/emp/employees -> 401 Authentication token is missing
+2026-10-17T00:24:12.247Z [INFO] GET /api/v1/emp/employees 401 - 0.526 ms
+2026-10-17T00:24:12.341Z [WARN] Auth failed: Invalid token
+2026-10-17T00:24:12.342Z [WARN] GET /api/v1/emp/employees -> 401 Invalid token
+2026-10-17T00:24:12.342Z [INFO] GET /api/v1/emp/employees 401 - 0.673 ms
+2026-10-17T00:24:12.438Z [WARN] Validation failed on GET /api/v1/emp/employees/not-an-id: eid
+2026-10-17T00:24:12.438Z [WARN] GET /api/v1/emp/employees/not-an-id -> 400 Validation failed
+2026-10-17T00:24:12.439Z [INFO] GET /api/v1/emp/employees/not-an-id 400 - 3.585 ms
+2026-10-17T00:24:12.517Z [WARN] GET /api/v1/emp/employees/000000000000000000000000 -> 404 Employee not found
+2026-10-17T00:24:12.518Z [INFO] GET /api/v1/emp/employees/000000000000000000000000 404 - 4.567 ms
+2026-10-17T00:24:12.597Z [WARN] Validation failed on POST /api/v1/emp/employees: last_name, email, position, salary, date_of_joining, department
+2026-10-17T00:24:12.597Z [WARN] POST /api/v1/emp/employees -> 400 Validation failed
+2026-10-17T00:24:12.598Z [INFO] POST /api/v1/emp/employees 400 - 3.683 ms
+2026-10-17T00:24:12.691Z [WARN] Validation failed on PUT /api/v1/emp/employees/000000000000000000000000: 
+2026-10-17T00:24:12.691Z [WARN] PUT /api/v1/emp/employees/000000000000000000000000 -> 400 Validation failed
+2026-10-17T00:24:12.692Z [INFO] PUT /api/v1/emp/employees/000000000000000000000000 400 - 3.348 ms
+2026-10-17T00:24:12.768Z [WARN] Validation failed on DELETE /api/v1/emp/employees: eid
+2026-10-17T00:24:12.768Z [WARN] DELETE /api/v1/emp/employees -> 400 Validation failed
+2026-10-17T00:24:12.768Z [INFO] DELETE /api/v1/emp/employees 400 - 2.960 ms
+2026-10-17T00:24:12.858Z [WARN] GET /api/v1/does-not-exist -> 404 Route GET /api/v1/does-not-exist not found
+2026-10-17T00:24:12.859Z [INFO] GET /api/v1/does-not-exist 404 - 0.598 ms
+2026-10-17T00:24:30.152Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:30.152Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:30.153Z [INFO] POST /api/v1/user/login 401 - 71.031 ms
+2026-10-17T00:24:30.321Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:30.322Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:30.322Z [INFO] POST /api/v1/user/login 401 - 72.000 ms
+2026-10-17T00:24:30.503Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:30.504Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:30.504Z [INFO] POST /api/v1/user/login 401 - 82.458 ms
+2026-10-17T00:24:30.670Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:30.671Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:30.671Z [INFO] POST /api/v1/user/login 401 - 78.639 ms
+2026-10-17T00:24:30.846Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:30.846Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:30.846Z [INFO] POST /api/v1/user/login 401 - 81.222 ms
+2026-10-17T00:24:31.019Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:31.020Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:31.021Z [INFO] POST /api/v1/user/login 401 - 83.702 ms
+2026-10-17T00:24:31.185Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:31.185Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:31.186Z [INFO] POST /api/v1/user/login 401 - 79.495 ms
+2026-10-17T00:24:31.345Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:31.346Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:31.346Z [INFO] POST /api/v1/user/login 401 - 82.526 ms
+2026-10-17T00:24:31.517Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:31.517Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:31.518Z [INFO] POST /api/v1/user/login 401 - 81.391 ms
+2026-10-17T00:24:31.689Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:31.690Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:31.690Z [INFO] POST /api/v1/user/login 401 - 81.283 ms
+2026-10-17T00:24:31.843Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:31.843Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:31.844Z [INFO] POST /api/v1/user/login 401 - 79.708 ms
+2026-10-17T00:24:31.999Z [WARN] Failed login attempt for alice
+2026-10-17T00:24:31.999Z [WARN] POST /api/v1/user/login -> 401 Invalid username or password
+2026-10-17T00:24:32.000Z [INFO] POST /api/v1/user/login 401 - 80.519 ms
