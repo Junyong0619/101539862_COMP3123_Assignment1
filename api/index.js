@@ -5,11 +5,13 @@
 require('dotenv').config();
 const app = require('../src/app');
 const connectDB = require('../src/config/db');
+const logger = require('../src/utils/logger');
 
 module.exports = async (req, res) => {
   try {
     await connectDB();
   } catch (err) {
+    logger.error(`MongoDB connection failed: ${err.message}`);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     return res.end(JSON.stringify({ status: 'error', message: 'Database connection failed' }));
