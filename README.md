@@ -3,6 +3,8 @@
 **Student:** Junyong Choi (101539862)
 **Course:** COMP3123 Full Stack Development I, Fall 2026
 
+**Live API (Vercel):** https://101539862-comp-3123-assignment1.vercel.app  (health check: https://101539862-comp-3123-assignment1.vercel.app/health)
+
 ## 1. Project
 
 A secure back-end REST API for managing employee records. Users register and log in, receive a JSON Web Token (JWT), and then create, read, update and delete **their own** employees. Every employee belongs to the user who created it, and that ownership is enforced inside every database query so one user can never see or touch another user's data.
@@ -38,6 +40,8 @@ src/
   utils/AppError.js         # Error with HTTP status code
   utils/jwt.js              # sign / verify helpers
   utils/logger.js           # winston logger (logs/app.log, logs/error.log)
+api/index.js                # Vercel serverless entry point (wraps the same Express app)
+vercel.json                 # routes every request to api/index.js on Vercel
 postman/                    # exported Postman collection
 logs/samples/               # sample log output (real logs are git-ignored)
 .env.example                # required environment variables (no secrets)
@@ -211,3 +215,23 @@ Each request has test scripts that assert the expected status code, so the Runne
 |---|---|---|---|
 | A | `alice` | `alice@example.com` | `Password123!` |
 | B | `bob` | `bob@example.com` | `Password123!` |
+
+## 11. Live deployment (Vercel)
+
+The API is hosted on Vercel: **https://101539862-comp-3123-assignment1.vercel.app**
+
+| Endpoint | URL |
+|---|---|
+| Health | `https://101539862-comp-3123-assignment1.vercel.app/health` |
+| Signup | `POST https://101539862-comp-3123-assignment1.vercel.app/api/v1/user/signup` |
+| Login | `POST https://101539862-comp-3123-assignment1.vercel.app/api/v1/user/login` |
+| Employees | `https://101539862-comp-3123-assignment1.vercel.app/api/v1/emp/employees` (Bearer token required) |
+
+How it works:
+- `api/index.js` is the serverless entry point. Vercel invokes it for every request; it makes sure the MongoDB connection is open (`connectDB` reuses an existing connection) and then hands the request to the same Express app used locally.
+- `vercel.json` rewrites every path to that function, so the routes are identical to the local server.
+- The database is a MongoDB Atlas cluster; `MONGODB_URI`, `JWT_SECRET` and `JWT_EXPIRES_IN` are set as Vercel environment variables (never committed).
+- On Vercel the file system is read-only, so winston logs only to the console there; the output is visible in the project's **Logs** tab in the Vercel dashboard. Locally the file logs in `logs/` are written as before.
+- Express is told to trust Vercel's proxy so the rate limiter sees the real client IP.
+
+To test the live API with the Postman collection, change the `baseUrl` collection variable to `https://101539862-comp-3123-assignment1.vercel.app`.
