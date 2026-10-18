@@ -6,6 +6,10 @@ const rateLimit = require('express-rate-limit');
 
 const app = express();
 
+// On Vercel requests arrive through a proxy; trust it so req.ip (used by the rate limiter)
+// is the real client address instead of the proxy address.
+if (process.env.VERCEL) app.set('trust proxy', 1);
+
 // security headers on every response
 app.use(helmet());
 // prevent the unlimited adding auth endpoints: 20 max for 15 min pur IP
